@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIC TRANSPORT România</title>
+<style>
+:root{--bg:#07111f;--card:#0f1b2e;--accent:#36c2ff;--text:#eaf4ff;--muted:#9bb3c9}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:Inter,Arial,sans-serif;background:radial-gradient(circle at top,#10213d,#07111f 55%);color:var(--text);overflow-x:hidden}
+header{position:fixed;top:0;width:100%;backdrop-filter:blur(12px);background:rgba(7,17,31,.55);padding:18px 40px;z-index:20;border-bottom:1px solid rgba(255,255,255,.08)}
+nav{display:flex;justify-content:space-between;align-items:center}.menu a{color:#fff;text-decoration:none;margin-left:18px}
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 40px 40px;position:relative}
+.hero:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.65),rgba(0,0,0,.2)),url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1600&q=80') center/cover;filter:blur(0px);z-index:-2}.hero:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(7,17,31,.9));z-index:-1}
+.box{max-width:720px;animation:float 6s ease-in-out infinite}.badge{display:inline-block;padding:8px 14px;border-radius:999px;background:rgba(54,194,255,.15);border:1px solid rgba(54,194,255,.35);margin-bottom:18px}.title{font-size:58px;line-height:1.05}.lead{margin:18px 0;color:#dbeafe;font-size:18px}.btn{display:inline-block;padding:14px 22px;background:linear-gradient(135deg,#36c2ff,#0ea5e9);color:#00111f;text-decoration:none;border-radius:14px;font-weight:700;box-shadow:0 10px 35px rgba(54,194,255,.35);transition:.3s}.btn:hover{transform:translateY(-3px) scale(1.03)}
+section{padding:70px 40px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}.card{background:rgba(15,27,46,.8);border:1px solid rgba(255,255,255,.06);padding:24px;border-radius:22px;box-shadow:0 18px 40px rgba(0,0,0,.28);transform-style:preserve-3d;transition:.35s}.card:hover{transform:rotateX(8deg) rotateY(-8deg) translateY(-6px)}h2{font-size:38px;margin-bottom:25px}.muted{color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px}.stat{padding:24px;background:var(--card);border-radius:18px;text-align:center}.num{font-size:40px;font-weight:800;color:#36c2ff}
+.tracker input{padding:14px;border-radius:12px;border:none;width:280px}.tracker button{margin-left:10px}
+footer{padding:40px;text-align:center;color:#8fa6be}
+.blur-orb{position:fixed;width:260px;height:260px;border-radius:50%;filter:blur(70px);background:#36c2ff22;top:15%;right:-80px;pointer-events:none}.blur2{top:auto;bottom:10%;left:-100px;background:#2563eb22}
+@keyframes float{50%{transform:translateY(-10px)}}
+</style>
+</head>
+<body>
+<div class='blur-orb'></div><div class='blur-orb blur2'></div>
+<header><nav><strong>SIC TRANSPORT</strong><div class='menu'><a href='#servicii'>Servicii</a><a href='#flota'>Flotă</a><a href='#urmarire'>Urmărire</a><a href='#contact'>Contact</a></div></nav></header>
+<section class='hero'>
+<div class='box'>
+<div class='badge'>Transport internațional din România</div>
+<div class='title'>Trailer, logistică și livrări premium în toată Europa</div>
+<p class='lead'>Companie modernă specializată în transport rutier cu trailere, plecări zilnice din România, tracking live și suport 24/7.</p>
+<a href='#contact' class='btn'>Solicită ofertă</a>
+</div>
+</section>
+<section id='servicii'>
+<h2>Serviciile Noastre</h2>
+<div class='grid'>
+<div class='card'><h3>Transport Full Truck Load</h3><p class='muted'>Trailere complete pentru marfă generală și industrială.</p></div>
+<div class='card'><h3>Express Europa</h3><p class='muted'>Curse rapide România - Germania, Spania, Franța, Italia.</p></div>
+<div class='card'><h3>eCommerce Logistics</h3><p class='muted'>Depozitare, picking și distribuție modernă.</p></div>
+<div class='card'><h3>Temperatură Controlată</h3><p class='muted'>Transport frigorific și produse sensibile.</p></div>
+</div>
+</section>
+<section id='flota'>
+<h2>Flota SIC</h2>
+<div class='stats'>
+<div class='stat'><div class='num' data-target='120'>0</div>Trailere</div>
+<div class='stat'><div class='num' data-target='18'>0</div>Țări acoperite</div>
+<div class='stat'><div class='num' data-target='98'>0</div>% Livrări la timp</div>
+<div class='stat'><div class='num' data-target='24'>0</div>Ore suport</div>
+</div>
+</section>
+<section id='urmarire'>
+<h2>Urmărire Transport</h2>
+<div class='tracker'>
+<input id='code' placeholder='SICRO-45882'> <a class='btn' onclick='track()'>Caută</a>
+<div id='rez' style='margin-top:20px'></div>
+</div>
+</section>
+<section id='contact'>
+<h2>Contact România</h2>
+<div class='grid'>
+<div class='card'><h3>Suceava HQ</h3><p class='muted'>Sediu principal în Suceava, ofertare și dispecerat central.</p></div>
+<div class='card'><h3>Email</h3><p class='muted'>suceava@sictransport.ro</p></div>
+<div class='card'><h3>Telefon</h3><p class='muted'>+40 700 000 000</p></div>
+</div>
+</section>
+<footer>© 2026 SIC TRANSPORT România — Logistics Reimagined</footer>
+<script>
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){const el=e.target;let t=+el.dataset.target,n=0;const i=setInterval(()=>{n+=Math.ceil(t/30);if(n>=t){n=t;clearInterval(i)}el.textContent=n},35);obs.unobserve(el)}})});
+document.querySelectorAll('.num').forEach(n=>obs.observe(n));
+function track(){const c=document.getElementById('code').value.trim();document.getElementById('rez').innerHTML=c?`<div class='card'><strong>Cod:</strong> ${c}<br><span class='muted'>Trailer plecat din România • În tranzit către destinație • ETA 18:30</span></div>`:'<div class="card">Introduceți un cod valid.</div>'}
+document.addEventListener('mousemove',e=>{document.querySelectorAll('.blur-orb').forEach((b,i)=>{const x=(e.clientX/(30+i*20));const y=(e.clientY/(30+i*20));b.style.transform=`translate(${x}px,${y}px)`})});
+</script>
+</body>
+</html>
